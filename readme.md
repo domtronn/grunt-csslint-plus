@@ -12,3 +12,6 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 ```javascript
 grunt.loadNpmTasks('grunt-csslint-plus');
 ```
+
+## Csslint Plus Task
+_Run this task with `grunt csslint_plus` command_
