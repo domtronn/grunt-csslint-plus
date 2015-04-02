@@ -14,4 +14,36 @@ grunt.loadNpmTasks('grunt-csslint-plus');
 ```
 
 ## Csslint Plus Task
-_Run this task with `grunt csslint_plus` command_
+Run this task with `grunt csslint_plus` command
+
+## Options
+To include your own custom rules for csslinting, you must provide an array of directories containing rules in the following way:
+
+```javascript
+csslint_plus: {
+  rules: [
+	'node_modules/grunt-more-csslint-rules/examples/*.js'
+  ]
+}
+```
+
+Two example rules are provided in the node module
+
+## Custom Rule Files
+To define your own custom css rules, you must provide rules in the following example format:
+```javascript
+var rule = {
+  id: "example_id",
+  name: "example_rule_name",
+  desc: "description of rule",
+  init: function(parser, reporter) {
+	var rule = this;
+	parser.addListener("startRule", function(evt) { ... } ), # example listeners
+	parser.addListener("endRule", function(evt) { ... } ) # another example listener
+  }
+}
+
+exports.Rule = rule
+```
+
+Probably the best way to get documentation is to look through the rules available in csslint as there are a lot more listeners.
