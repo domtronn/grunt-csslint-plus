@@ -1,0 +1,34 @@
+{
+  "name": "grunt-csslint-plus",
+  "version": "0.0.0",
+  "description": "Extension to allow custom rules for CSSLint to be defined and loaded",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/domtronn/grunt-csslint-plus.git"
+  },
+  "keywords": [
+    "grunt",
+    "csslint",
+    "plus",
+    "css",
+    "rule",
+    "lint",
+    "custom",
+    "npm"
+  ],
+  "author": "Dominic Charlesworth <dgc336@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domtronn/grunt-csslint-plus/issues"
+  },
+  "homepage": "https://github.com/domtronn/grunt-csslint-plus",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-csslint": "~0.4.0"
+  }
+}
