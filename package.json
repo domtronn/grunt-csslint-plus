@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git://github.com/domtronn/grunt-csslint-plus.git"
   },
+	"dependencies": {
+    "grunt-contrib-csslint": ">= 0.4.0"
+  },
   "keywords": [
     "grunt",
     "csslint",
