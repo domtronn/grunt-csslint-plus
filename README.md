@@ -22,7 +22,7 @@ To include your own custom rules for csslinting, you must provide an array of di
 ```javascript
 csslint_plus: {
   rules: [
-	'node_modules/grunt-more-csslint-rules/examples/*.js'
+	'node_modules/grunt-csslint-plus/examples/*.js'
   ]
 }
 ```
