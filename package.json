@@ -1,6 +1,6 @@
 {
   "name": "grunt-csslint-plus",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Extension to allow custom rules for CSSLint to be defined and loaded",
   "main": "index.js",
   "scripts": {
