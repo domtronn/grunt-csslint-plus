@@ -35,6 +35,8 @@ module.exports = function(grunt) {
 			grunt.log.writeln( 'Currently running %s csslint rules', csslint.getRules().length );
 		}
 
-		grunt.task.run('csslint:strict');
+		var args = grunt.task.current.args.join(':');
+    if (args) grunt.task.run('csslint:' + args);
+	  else grunt.task.run('csslint');
   });
 };
