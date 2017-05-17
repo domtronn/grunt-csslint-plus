@@ -15,11 +15,18 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('csslint_plus', 'Run CSSLint with custom rules', function() {
     // Merge task-specific and/or target-specific options with these defaults.
-		var path = require('path');
+        var path = require('path');
+		var fs = require('fs');
 		var options = this.options();
 		// Have to require instance of CSS Lint being used by the root gruntfile
 		var csslintPath = path.resolve( "node_modules/grunt-contrib-csslint/node_modules/csslint/lib/csslint-node.js");
-    var csslint = require( csslintPath ).CSSLint;
+        var csslint;
+
+        if (fs.existsSync(csslintPath)) {
+            csslint = require( csslintPath ).CSSLint;
+        } else {
+            csslint = require( 'csslint' ).CSSLint;
+        }
 
 
 		if ( this.filesSrc ) {
